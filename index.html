@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Programming e-Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --card-bg: #ffffff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--card-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .member-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .member-list li {
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 1rem 0;
+            background-color: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            margin-top: 4rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Secure Programming</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="card">
+            <h2>Group Information</h2>
+            <ul class="member-list">
+                <li><strong>ZHANG KAIYUAN</strong> | Matric No: A206715 | Role: Project Manager & Backend Dev | Contribution: Configured Firebase and implemented SQL injection prevention.</li>
+                <li><strong>YU RUNHE</strong> | Matric No: A206714 | Role: Lead Frontend Dev | Contribution: Designed UI with Jetpack Compose and handled frontend validation.</li>
+                <li><strong>ZHANG YUDONG</strong> | Matric No: A206718 | Role: Security Analyst | Contribution: Conducted vulnerability testing and implemented data encryption.</li>
+                <li><strong>SUBO ZIHAO</strong> | Matric No: A206690 | Role: Android Developer | Contribution: Managed Room database and integrated Retrofit APIs securely.</li>
+                <li><strong>SUN XIAOTIAN</strong> | Matric No: A206719 | Role: QA Tester & Documentation | Contribution: Recorded demonstration videos and wrote project reflections.</li>
+            </ul>
+            <p><strong>Programme:</strong> Bachelor of Computer Science</p>
+            <p><strong>Instructor:</strong> Dr. Instructor Name</p>
+            
+            <h3 style="margin-top: 2rem;">Scenario</h3>
+            <p>In modern mobile applications, data breaches are a severe threat due to insecure coding practices. Our team developed a secure financial tracking Android application to demonstrate how common vulnerabilities can be exploited and subsequently mitigated.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Project: SecureWallet Pro</h2>
+        <div class="card">
+            <h3>Problem Statement</h3>
+            <p>Many financial mobile apps fail to sanitize user inputs and secure local data, leaving them vulnerable to attacks. This project addresses these flaws by implementing secure coding practices across authentication, data storage, and network communication.</p>
+            <!-- 使用了临时项目总链接 -->
+            <a href="https://github.com/android/architecture-samples" class="btn" target="_blank">View Project on GitHub</a>
+        </div>
+
+        <div class="grid">
+            <!-- Case 1 -->
+            <div class="card">
+                <h3>Case 1: Login Test</h3>
+                <p>Live Code Vulnerability Implementation.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" title="Login Test Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p><strong>Reflection:</strong> We learned that client-side validation alone is insufficient. Implementing secure token-based authentication and server-side rate limiting drastically improved our login security against brute-force attacks.</p>
+                <!-- 使用了临时 Case 1 链接 -->
+                <a href="https://github.com/android/architecture-samples/blob/main/README.md" class="btn" target="_blank">View Code</a>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="card">
+                <h3>Case 2: Insecure Local Storage</h3>
+                <p>Live Code Vulnerability Implementation.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="Data 1 Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p><strong>Reflection:</strong> Storing sensitive data in plain text is highly risky. We utilized EncryptedSharedPreferences to ensure user tokens and preferences remain securely encrypted on the device.</p>
+                <!-- 使用了临时 Case 2 链接 -->
+                <a href="https://github.com/android/architecture-samples/tree/main/app/src/main/java/com/example/android/architecture/blueprints/todoapp" class="btn" target="_blank">View Code</a>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="card">
+                <h3>Case 3: Hardcoded API Keys</h3>
+                <p>Live Code Vulnerability Implementation.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" title="Data 2 Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p><strong>Reflection:</strong> Hardcoding keys in the source code exposes backend services to unauthorized access. We resolved this by migrating secrets to local.properties and using the Secrets Gradle Plugin.</p>
+                <!-- 使用了临时 Case 3 链接 -->
+                <a href="https://github.com/android/architecture-samples/tree/main/app/src/main/res/layout" class="btn" target="_blank">View Code</a>
+            </div>
+
+            <!-- Case 4 -->
+            <div class="card">
+                <h3>Case 4: SQL Injection</h3>
+                <p>Live Code Vulnerability Implementation.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4" title="SQL Injection Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p><strong>Reflection:</strong> Concatenating strings for SQL queries creates severe injection risks. Using Room with parameterized queries automatically neutralized this vulnerability and protected our local database.</p>
+                <!-- 使用了临时 Case 4 链接 -->
+                <a href="https://github.com/android/architecture-samples/blob/main/build-logic/dependencies/build.gradle.kts" class="btn" target="_blank">View Code</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reflection">
+        <div class="card">
+            <h2>Reflection & Learning Journey</h2>
+            <p>This project significantly deepened our understanding of mobile application security. We transitioned from merely making features work to proactively thinking like attackers to secure our code. Collaborating on these vulnerability solutions taught us that security must be integrated throughout the development lifecycle, not treated as an afterthought.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="card">
+            <h2>Skills & Tech Stack</h2>
+            <p>Kotlin, Jetpack Compose, Android Room, Retrofit, Firebase Authentication, EncryptedSharedPreferences, SSL Pinning</p>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="card">
+            <h2>Resources</h2>
+            <p>Android Jetpack Libraries, Firebase SDK, Retrofit2, Material Design 3. We acknowledge the use of AI tools (ChatGPT/Gemini) for debugging complex UI layouts and refining our technical documentation.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ZHANG KAIYUAN (A206715), YU RUNHE (A206714), ZHANG YUDONG (A206718), SUBO ZIHAO (A206690), SUN XIAOTIAN (A206719)</p>
+    </footer>
+
+</body>
+</html>
